@@ -1,4 +1,4 @@
-$.widget("coal.notification", {
+$.widget("coalexe.notification", {
 
   options: {
     // Configure how the notification is removed.

@@ -1,0 +1,24 @@
+{
+  "name": "notifications",
+  "homepage": "https://github.com/coalexe/notifications",
+  "authors": [
+    "coalexe"
+  ],
+  "description": "Simple notifications widget for your web application",
+  "main": "src/js/notifications.js src/scss/notifications.scss",
+  "moduleType": [],
+  "keywords": [
+    "notification",
+    "notifications",
+    "notify",
+    "alert"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
