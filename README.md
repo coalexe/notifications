@@ -30,19 +30,19 @@ You can init the widget with "li" elements in your unordered list like this:
 
 Notifications will automatically appear when initializing the widget.
 Note that "li" elements need to have one of these css classes:
-*notification-info
-*notification-succes
-*notification-warning
-*notification-error
+* notification-info
+* notification-succes
+* notification-warning
+* notification-error
 
 ## add notification
 notificationWidget.notifications("add", "type", "message");
 
 Supported types:
-*success
-*info
-*warning
-*error
+* success
+* info
+* warning
+* error
 
 
 
