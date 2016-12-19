@@ -9,10 +9,29 @@ jQuery-ui
 
 # usage
 ## initialization
-var n = $("#id").notifications();
+### empty list
+Add an empty unordered list element (<ul id="notifications"></ul> in your html.
+
+var notificationWidget = $("#notifications").notifications();
+
+### list containing notifications
+You can init the widget with "li" elements in your unordered list like this:
+<ul id="notifications">
+<li class="notification-info">Info</li>
+<li class="notification-success">Success</li>
+<li class="notification-warning">Warning</li>
+<li class="notification-error">Error</li>
+</ul>
+
+Notifications will automatically appear when initializing the widget.
+Note that "li" elements need to have one of these css classes:
+*notification-info
+*notification-succes
+*notification-warning
+*notification-error
 
 ## add notification
-n.notifications("add", "type", "message");
+notificationWidget.notifications("add", "type", "message");
 
 Supported types:
 *success
