@@ -11,17 +11,17 @@ jQuery-ui
 ## initialization
 ### empty list
 Add an empty unordered list element in your html:
-'''html
+```html
 <pre>  
   <ul id="notifications"></ul>
 </pre>
-'''
+```
 
 var notificationWidget = $("#notifications").notifications();
 
 ### list containing notifications
 You can init the widget with "li" elements in your unordered list like this:
-'''html
+```html
 <pre>
   <ul id="notifications">
     <li class="notification-info">Info</li>
@@ -30,7 +30,7 @@ You can init the widget with "li" elements in your unordered list like this:
     <li class="notification-error">Error</li>
   </ul>
 </pre>
-'''  
+``` 
 
 Notifications will automatically appear when initializing the widget.
 Note that "li" elements need to have one of these css classes:
