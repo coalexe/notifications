@@ -1,0 +1,13 @@
+{
+    "name": "coalexe/notifications",
+    "description": "Simple notifications widget for your web application. Shows success, info, warning and error notification message at the bottom of the screen.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "coalexe",
+            "email": "alex.cote@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
