@@ -46,6 +46,11 @@ $.widget("coalexe.notification", {
     });
   },
   
+  _destroy: function() {
+    this._notifications = null;
+    this.element.find("li").removeAttr("data-notification-id");
+  },
+  
   _bindEvents: function () {
     if (this.options.closeMethod === "click")
       this._on({ "click li": this._removeNotificationClickHandler });
