@@ -5,7 +5,7 @@
     "coalexe"
   ],
   "description": "Simple notifications widget for your web application",
-  "main": "src/js/notifications.js src/scss/notifications.scss",
+  "main": "src/js/notifications.js src/css/notifications.css",
   "moduleType": [],
   "keywords": [
     "notification",
