@@ -12,7 +12,7 @@ ul.notifications {
 }
 
 ul.notifications li {
-  padding: 1rem 0;
+  padding: 10px 32px;
   position: relative;
 }
 
@@ -20,8 +20,8 @@ ul.notifications li i {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.5rem;
-  margin: 0.3rem;
+  font-size: 26px;
+  margin: 3px 5px;
   cursor: pointer;
 }
 
