@@ -1,4 +1,4 @@
-$.widget("coalexe.notification", {
+$.widget("coalexe.notifications", {
 
   options: {
     // Configure how the notification is removed.
@@ -73,7 +73,7 @@ $.widget("coalexe.notification", {
       }
       
       if (that.options.closeMethod === "click")
-        $newNotification.addClass("notification-click");
+        $newNotification.addClass("notification-click").attr("title", "Click to close");
       
       that.element.append($newNotification);
       
