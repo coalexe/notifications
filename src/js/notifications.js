@@ -14,6 +14,7 @@ $.widget("coalexe.notifications", {
   
   _create: function() {
     var that = this;
+    var initialNotifications = [];
     that._id = 1;
     that._notifications = [];
     
@@ -37,12 +38,15 @@ $.widget("coalexe.notifications", {
         type = type.substr(type.indexOf("-") + 1);
       } else { // If no notification type, default to info.
         type = "info";
-        $this.addClass("notification-info");
       }
       
-      // Add the notification to the internal notifications list.
-      that._notifications.push({id: that._id, message: message, type: type });
-      $this.attr("data-notification-id", that._id++);
+      initialNotifications.push({message: message, type: type}); // Store the initial notifications.
+      $this.remove(); // Remove the current li. It will be replaced when calling the "add"" method.
+    });
+    
+    // Add each initial notification by calling the "add" method to make sure options are respected.  
+    initialNotifications.forEach(function (notification) {
+      that.add(notification.message, notification.type);
     });
   },
   
