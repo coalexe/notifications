@@ -9,7 +9,7 @@ $.widget("coalexe.notifications", {
     // Duration in ms to show the notification
     showDuration: 200,
     // Duration in ms to hide the notification
-    hideDuration: 500,
+    hideDuration: 500
   },
   
   _create: function() {
@@ -91,7 +91,7 @@ $.widget("coalexe.notifications", {
       var $existingNotification = that.element.find("li[data-notification-id=" + notification.id + "]");
       $existingNotification.fadeOut(250, function () {
         $existingNotification.fadeIn(250);
-      })
+      });
     }
   },
 
