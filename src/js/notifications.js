@@ -59,7 +59,7 @@ $.widget("coalexe.notifications", {
     if (this.options.closeMethod === "click")
       this._on({ "click li": this._removeNotificationClickHandler });
     else if (this.options.closeMethod === "button")
-      this._on({ "click i": this._removeNotificationCloseButtonHandler });          
+      this._on({ "click .close-button": this._removeNotificationCloseButtonHandler });          
   },
   
   add: function (message, type) {
@@ -72,7 +72,7 @@ $.widget("coalexe.notifications", {
       var $newNotification = $("<li></li>").addClass("notification-" + type).text(message).attr("data-notification-id", that._id++).hide();
       
       if (that.options.closeMethod === "button") {
-        var $closeButton = $("<i></i>").addClass("close-button fa fa-times");
+        var $closeButton = $("<span></span>").addClass("close-button");
         $newNotification.append($closeButton);
       }
       

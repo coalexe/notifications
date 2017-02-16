@@ -16,33 +16,13 @@ ul.notifications li {
   position: relative;
 }
 
-ul.notifications li i {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 26px;
-  margin: 3px 5px;
-  cursor: pointer;
-}
-
 .notification-click {
   cursor: pointer;
 }
 
 .notification-info {
-  background-color: rgb(255, 246, 143);
-  background-color: rgba(255, 246, 143, 0.9);
-  color: #362819;
-}
-
-.notification-info i {
-  color: rgb(200, 179, 102);
-  color: rgba(200, 179, 102, 0.75);
-}
-
-.notification-info i:hover {
-  color: rgb(200, 199, 122);
-  color: rgba(220, 199, 122, 0.9);
+  background-color: rgb(59, 198, 255);
+  background-color: rgba(59, 198, 255, 0.9);
 }
 
 .notification-success {
@@ -50,42 +30,32 @@ ul.notifications li i {
   background-color: rgba(0, 174, 0, 0.9);
 }
 
-.notification-success i {
-  color: rgb(150, 255, 150);
-  color: rgba(150, 255, 150, 0.75);
-}
-
-.notification-success i:hover {
-  color: rgb(200, 255, 200);
-  color: rgba(200, 255, 200, 0.9);
-}
-
 .notification-warning {
   background-color: rgb(255, 114, 22);
   background-color: rgba(255, 114, 22, 0.9);
 }
 
-.notification-warning i {
-  color: rgb(255, 193, 85);
-  color: rgba(255, 193, 85, 0.75);
-}
-
-.notification-warning i:hover {
-  color: rgb(255, 213, 115);
-  color: rgba(255, 213, 115, 0.9);
-}
 
 .notification-error {
   background-color: rgb(255, 25, 25);
   background-color: rgba(255, 25, 25, 0.9);  
 }
 
-.notification-error i {
-  color: rgb(255, 150, 150);
-  color: rgba(255, 150, 150, 0.75);
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 7px 7px;
+  cursor: pointer;  
+  background-image: url("close-button2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
 }
 
-.notification-error i:hover {
-  color: rgb(255, 190, 190);
-  color: rgba(255, 190, 190, 0.9);
+.close-button:hover {
+  opacity: 0.8;
 }
+
