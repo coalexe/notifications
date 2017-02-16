@@ -47,7 +47,7 @@ ul.notifications li {
   right: 0;
   margin: 7px 7px;
   cursor: pointer;  
-  background-image: url("close-button2.png");
+  background-image: url("../images/close-button.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 18px;
