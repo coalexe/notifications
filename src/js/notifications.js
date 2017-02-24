@@ -9,7 +9,7 @@ $.widget("coalexe.notifications", {
     // Duration in ms to show the notification
     showDuration: 200,
     // Duration in ms to hide the notification
-    hideDuration: 500,
+    hideDuration: 500
   },
   
   _create: function() {
@@ -91,7 +91,7 @@ $.widget("coalexe.notifications", {
       var $existingNotification = that.element.find("li[data-notification-id=" + notification.id + "]");
       $existingNotification.fadeOut(250, function () {
         $existingNotification.fadeIn(250);
-      })
+      });
     }
   },
 
@@ -111,7 +111,8 @@ $.widget("coalexe.notifications", {
     var removeCallback = function () {
       $notification.remove();
       // Remove the notification from the internal notifications list.
-      that._notifications.splice(index, 1);      
+      if (typeof index === "number")
+        that._notifications.splice(index, 1);      
     };
     
     // Remove the notification. 
@@ -122,15 +123,31 @@ $.widget("coalexe.notifications", {
   },  
   
   _findNotificationIndexById: function (id) {
-    return this._notifications.findIndex(function(notification) {
-      return notification.id === id;
-    });
+    var result;
+    var nbNotifications = this._notifications.length;
+
+    for (var i = 0; i < nbNotifications; i++) {
+        if (this._notifications[i].id === id) {
+            result = i;
+            break;
+        }
+    }
+
+    return result;
   },
   
   _findNotificationByMessageAndType: function (message, type) {
-    return this._notifications.find(function(notification) {
-      return notification.type === type && notification.message === message;
-    });
+    var result;
+    var nbNotifications = this._notifications.length;
+
+    for (var i = 0; i < nbNotifications; i++) {
+        if (this._notifications[i].type === type && this._notifications[i].message === message) {
+            result = this._notification[i];
+            break;
+        }
+    }
+
+    return result;
   }
 
 });
