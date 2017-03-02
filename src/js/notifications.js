@@ -142,7 +142,7 @@ $.widget("coalexe.notifications", {
 
     for (var i = 0; i < nbNotifications; i++) {
         if (this._notifications[i].type === type && this._notifications[i].message === message) {
-            result = this._notification[i];
+            result = this._notifications[i];
             break;
         }
     }
