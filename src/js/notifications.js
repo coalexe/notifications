@@ -27,7 +27,7 @@ $.widget("coalexe.notifications", {
     // Find notifications present at startup (inside the html).
     that.element.find("li").each(function () {
       var $this = $(this);
-      var message = $this.text();
+      var message = $this.html();
       var classes = $this.attr("class") ? $this.attr("class").split(" ") : [];
       var type = classes.find(function (currentClass) {
         return currentClass.startsWith("notification-");
@@ -69,7 +69,7 @@ $.widget("coalexe.notifications", {
     // Check if the notification already exist.
     if (notification === undefined) { // New notification.
       that._notifications.push({id: that._id, message: message, type: type });
-      var $newNotification = $("<li></li>").addClass("notification-" + type).text(message).attr("data-notification-id", that._id++).hide();
+      var $newNotification = $("<li></li>").addClass("notification-" + type).html(message).attr("data-notification-id", that._id++).hide();
       
       if (that.options.closeMethod === "button") {
         var $closeButton = $("<span></span>").addClass("close-button");
